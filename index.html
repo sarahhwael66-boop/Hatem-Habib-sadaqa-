@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صدقة جارية - حاتم نبيل حبيب سويلم</title>
+<style>
+body{
+margin:0;
+font-family:Tahoma,Arial,sans-serif;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-attachment:fixed;
+color:white;
+}
+.container{max-width:900px;margin:auto;padding:30px;}
+.card{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(8px);
+padding:25px;
+margin:20px 0;
+border-radius:18px;
+}
+h1,h2{text-align:center}
+p{line-height:2}
+button{
+padding:12px 24px;border:none;border-radius:12px;
+font-size:18px;cursor:pointer;
+}
+#count{text-align:center;margin-top:10px;font-size:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card">
+<h1>صدقة جارية</h1>
+<h2>على روح المرحوم حاتم نبيل حبيب سويلم</h2>
+<p style="text-align:center">نسألكم الدعاء له بالرحمة والمغفرة</p>
+</div>
+
+<div class="card">
+<h2>دعاء</h2>
+<p>
+اللهم اغفر له وارحمه وعافه واعف عنه وأكرم نزله ووسع مدخله،
+واغسله بالماء والثلج والبرد، ونقه من الذنوب والخطايا كما ينقى
+الثوب الأبيض من الدنس، واجعل قبره روضة من رياض الجنة.
+</p>
+</div>
+
+<div class="card">
+<h2>ادعُ له</h2>
+<div style="text-align:center">
+<button onclick="dua()">دعوت له 🤍</button>
+<div id="count">عدد الدعوات: 0</div>
+</div>
+</div>
+</div>
+
+<script>
+let c=localStorage.getItem('duaCount')||0;
+document.getElementById('count').innerText='عدد الدعوات: '+c;
+function dua(){
+c++;
+localStorage.setItem('duaCount',c);
+document.getElementById('count').innerText='عدد الدعوات: '+c;
+}
+</script>
+</body>
+</html>
